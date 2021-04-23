@@ -1,3 +1,5 @@
 CellProfiler analysis
 
 need to figure out the proper structure of this
+
+but probably log of images used, cell profiler pipeline, data storage, R analysis
