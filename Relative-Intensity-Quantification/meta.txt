@@ -1,0 +1,3 @@
+CellProfiler analysis
+
+need to figure out the proper structure of this
