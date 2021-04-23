@@ -1,0 +1,1 @@
+.csv files indicating the gains used for aquaring images
