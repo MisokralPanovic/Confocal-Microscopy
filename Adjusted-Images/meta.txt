@@ -1,0 +1,3 @@
+black and white images for channels, colour images for merge
+
+the intensity of channels can be adjusted for better presentation (but things of the same gain should have the same adjustments)
