@@ -14,7 +14,7 @@ breaks_graph <- c(0,
 plot_title <- 'IFIT1 NPtr 1 Object 1'
 ################
 
-i1_npt_1 <- read.csv(paste(
+initial_data <- read.csv(paste(
   'Colocalisation/Data/',
   
   ###############
@@ -26,10 +26,10 @@ i1_npt_1 <- read.csv(paste(
   head = TRUE, 
   sep=",")
 
-i1_npt_1 <- i1_npt_1 %>% 
+i1_npt_1 <- initial_data %>% 
   
   ###########
-filter(Condition == 'i1-ntp_4',
+filter(Condition == 'i1_npt_1',
        Object == 1)
 ###########
 
@@ -103,7 +103,7 @@ plot_i1_npt_1
 dpi <- 600
 width <- 10
 height <- 18
-file_name <- 'i2_transfection'
+file_name <- 'i1_npt_1'
 ###########
 
 ggsave(filename = paste(file_name, '.svg', sep = ''), 
