@@ -56,6 +56,7 @@ cytoplasm_ifit2b <- cytoplasm_ifit2b %>%
 
 # rename the condition based on list of conditions
 
+cytoplasm_ifit2b[cytoplasm_ifit2b==old_conditions[1]]<-list_of_conditions[1]
 cytoplasm_ifit2b[cytoplasm_ifit2b==old_conditions[2]]<-list_of_conditions[2]
 cytoplasm_ifit2b[cytoplasm_ifit2b==old_conditions[3]]<-list_of_conditions[3]
 
@@ -100,9 +101,9 @@ plot_cytoplasm_ifit2b <- ggplot(
       y = Value_norm,
       fill = Metadata_Condition)) +
   geom_violin(
-    trim = FALSE,
+    trim = T,
     alpha = 0.5,
-    scale = 'count',
+    scale = 'width',
     adjust = 0.7) +
   stat_summary(
     fun.data = mean_se, 
@@ -178,7 +179,7 @@ ggsave(filename = paste(
   file_name, '.svg', sep = ''), 
   plot = plot_cytoplasm_ifit2b, 
   device = 'svg', 
-  path = 'Figures', 
+  path = 'Relative-Intensity-Quantification/Figures', 
   dpi = dpi, 
   height = height, 
   width = width, 
@@ -187,14 +188,14 @@ ggsave(filename = paste(
   file_name, '.png', sep = ''), 
   plot = plot_cytoplasm_ifit2b, 
   device = 'png', 
-  path = 'Figures', 
+  path = 'Relative-Intensity-Quantification/Figures', 
   dpi = dpi, 
   height = height, 
   width = width, 
   units = 'cm')
 
 fwrite(cytoplasm_ifit2b, 
-       paste('Adjusted-Data/', 
+       paste('Relative-Intensity-Quantification/Adjusted-Data/', 
              file_name, 
              '.csv', 
              sep = ''))
