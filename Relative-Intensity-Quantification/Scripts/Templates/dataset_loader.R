@@ -16,7 +16,7 @@ nuclei_data <- read.csv(paste(
   head = TRUE, 
   sep=",") %>%
 
-  select(coulumn_selector)
+  select(all_of(coulumn_selector))
 
 target_data <- read.csv(paste(
   'Relative-Intensity-Quantification/Raw_Data/',
@@ -30,5 +30,5 @@ target_data <- read.csv(paste(
   head = TRUE, 
   sep=",") %>%
 
-  select(coulumn_selector)
+  select(all_of(coulumn_selector))
 
