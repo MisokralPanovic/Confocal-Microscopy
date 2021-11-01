@@ -1,8 +1,8 @@
 # .libPaths('C:/r_packages')
 library(tidyverse)
-coulumn_selector <- c(ObjectNumber, Metadata_Condition, 
-           Metadata_Picture, Metadata_Target, 
-           Intensity_MeanIntensity_DNA)
+coulumn_selector <- c('ObjectNumber', 'Metadata_Condition', 
+                      'Metadata_Picture', 'Metadata_Target', 
+                      'Intensity_MeanIntensity_DNA')
 
 nuclei_data <- read.csv(paste(
   'Relative-Intensity-Quantification/Raw_Data/',
