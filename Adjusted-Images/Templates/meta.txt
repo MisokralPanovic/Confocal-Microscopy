@@ -1,1 +1,0 @@
-.svg templates for adding scale bars and making panelled figures
